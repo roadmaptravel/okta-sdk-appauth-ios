@@ -82,7 +82,7 @@ public func clear() {
     tokens?.clear()
 }
 
-public func resume(_ url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+public func resume(_ url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
     if let authorizationFlow = currentAuthorizationFlow, authorizationFlow.resumeAuthorizationFlow(with: url){
         currentAuthorizationFlow = nil
         return true
